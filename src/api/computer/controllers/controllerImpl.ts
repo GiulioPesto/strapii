@@ -10,8 +10,6 @@ export const controllerImpl: CustomController = {
     const lang = ctx.params.lang;
     // Custom logic to fetch data from the database or any other source
     const data = await customServiceImpl.customServiceMethod(lang);
-    console.log(lang)
-    console.log(data)
     // Manipulate the response as needed
     const modifiedData = data.map(item => ({
       id: item.id,
@@ -22,6 +20,5 @@ export const controllerImpl: CustomController = {
 
     // Send the custom response
     ctx.body = modifiedData;
-    console.log(ctx.body)
   }
 };
